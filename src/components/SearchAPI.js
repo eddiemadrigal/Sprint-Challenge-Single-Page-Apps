@@ -16,9 +16,16 @@ import "./SearchAPI.css";function SearchAPI() {
                 response.data.results.map(({name, species}) => {
                     myData.push({ name: `${name}`, species: `${species}` });
                 });
+                
                 console.log("My Data: ", myData);
+
+                // const results = myData.filter(character => 
+                //     character.toLowerCase().includes(searchTerm.toLowerCase())
+                // );
+
+                let filter = "name";
                 const results = myData.filter(character => 
-                    character.toLowerCase().includes(searchTerm.toLowerCase())
+                    character[filter].toLowerCase().includes(searchTerm.toLowerCase())
                 );
                 setSearchResults(results);
             })
@@ -48,7 +55,7 @@ import "./SearchAPI.css";function SearchAPI() {
             <div>
                 <ul className="searchResults">
                     {searchResults.map(character => (
-                        <li key={character}>{character}</li>
+                        <li key={character['name']}>{character['name']} ({character['species']})</li>
                     ))}
                 </ul>
             </div>

@@ -65,11 +65,11 @@ Construct a Single Page Application with React.
 
 _Display Data from a Server API_
 - [X]  Fetch a list of characters from the Rick and Morty API's Characters endpoint *`https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/`* and render them to the screen. _NOTE: https://cors-anywhere.herokuapp.com/ in front of the actual URL just let's us get around CORS errors that happen on the server._
-- [ ]  You must display at least one element for each character.
+- [X]  You must display at least one element for each character.
 
 _Add a Router to this application using [React Router](https://reacttraining.com/react-router/web/guides/quick-start)._
 
-- [ ]  Hook up the Welcome page(Home page) and a Characters page with React Router.
+- [X]  Hook up the Welcome page(Home page) and a Characters page with React Router.
 - [ ]  Use a styling or component library for part of or all of your application. (Pick at least 1 of: [s](https://react-bootstrap.github.io/)tyled-components or Reactstrap).
 
 _Add 'Search by Name' feature._
