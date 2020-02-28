@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import ReactDOM from "react-dom";
 import axios from "axios";
+import { Card, CardTitle } from "reactstrap";
 import "./SearchAPI.css";function SearchAPI() {
 
     const [searchTerm, setSearchTerm] = useState("");
@@ -18,10 +19,6 @@ import "./SearchAPI.css";function SearchAPI() {
                 });
                 
                 console.log("My Data: ", myData);
-
-                // const results = myData.filter(character => 
-                //     character.toLowerCase().includes(searchTerm.toLowerCase())
-                // );
 
                 let filter = "name";
                 const results = myData.filter(character => 
@@ -53,11 +50,16 @@ import "./SearchAPI.css";function SearchAPI() {
                     onChange={handleChange}/>
             </form>
             <div>
+                
                 <ul className="searchResults">
                     {searchResults.map(character => (
-                        <li key={character['name']}>{character['name']} ({character['species']})</li>
+                        <Card>
+                        <CardTitle>{character['name']}</CardTitle>
+                        <li key={character['name']}> ({character['species']})</li>
+                        </Card>
                     ))}
                 </ul>
+                
             </div>
         </div>
     );
