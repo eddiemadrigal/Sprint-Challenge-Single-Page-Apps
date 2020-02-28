@@ -25,7 +25,7 @@ In this challenge, you will create a Single Page Application complete with Clien
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
-- [ ]  Explain benefit(s) using `client-side routing`?
+- [X]  Explain benefit(s) using `client-side routing`?
 
 > Answer: When a user wants to see content on the web, a browser is used to render a website containing the requested content and in initial file, usually a home page, is rendered by the browser on the computer.  Normally, if a user wants to access more information from the same site, links are usually used to navigate the tree structure and the server responds by re-directing requests and eventually gives the user the requested information. This sort of user request handling is done with Server side routing.  The process can be very heavy on networks and can sometimes cause the server to time out.  Client side routing, on the other hand, is the process of displaying the contents of a website on the user's computer, much like that done by a server, but without having to go through a network to reach additional content. All of the directories and files along with their paricular routing structure is done by files located on the user's computer.  The browser knows not to go back to the server unless the routing described in the program requires a request to back to the server.  This type of routing, called client-side routing, reduces network congestion, provides a much faster response to a user's request and enables the client's computer to handle the work that would have normally been assigned to a server on some network in some location.
 
@@ -33,15 +33,15 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 Follow these steps to set up and work on your project:
 
-- [ ]  Create a forked copy of this project.
-- [ ]  Add TL as collaborator on GitHub.
-- [ ]  Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ]  Create a new Branch on the clone: `git checkout -b <firstName-lastName>`.
-- [ ]  Implement the project on this branch, committing changes regularly.
-- [ ]  Push commits: `git push origin <firstName-lastName>`.
-- [ ]  **LOOK** at your project directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
-- [ ]  **RUN** `yarn install` or `npm install` to retrieve the client-side dependencies.
-- [ ]  **RUN** `yarn start` or `npm start` to fire up your React application.
+- [X]  Create a forked copy of this project.
+- [X]  Add TL as collaborator on GitHub.
+- [X]  Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [X]  Create a new Branch on the clone: `git checkout -b <firstName-lastName>`.
+- [X]  Implement the project on this branch, committing changes regularly.
+- [X]  Push commits: `git push origin <firstName-lastName>`.
+- [X]  **LOOK** at your project directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
+- [X]  **RUN** `yarn install` or `npm install` to retrieve the client-side dependencies.
+- [X]  **RUN** `yarn start` or `npm start` to fire up your React application.
 
 ### Exceeded rate limits?
 
@@ -64,7 +64,7 @@ Construct a Single Page Application with React.
 **Your finished project must include all of the following requirements:**
 
 _Display Data from a Server API_
-- [ ]  Fetch a list of characters from the Rick and Morty API's Characters endpoint *`https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/`* and render them to the screen. _NOTE: https://cors-anywhere.herokuapp.com/ in front of the actual URL just let's us get around CORS errors that happen on the server._
+- [X]  Fetch a list of characters from the Rick and Morty API's Characters endpoint *`https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/`* and render them to the screen. _NOTE: https://cors-anywhere.herokuapp.com/ in front of the actual URL just let's us get around CORS errors that happen on the server._
 - [ ]  You must display at least one element for each character.
 
 _Add a Router to this application using [React Router](https://reacttraining.com/react-router/web/guides/quick-start)._
