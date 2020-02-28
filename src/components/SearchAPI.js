@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import ReactDOM from "react-dom";
 import axios from "axios";
-import { Card, CardTitle } from "reactstrap";
+import { Row, Col, Card, CardTitle, CardText } from "reactstrap";
 import "./SearchAPI.css";function SearchAPI() {
 
     const [searchTerm, setSearchTerm] = useState("");
@@ -14,8 +14,8 @@ import "./SearchAPI.css";function SearchAPI() {
             .then(response => {
                 console.log(response.data.results);
                 const myData = [];
-                response.data.results.map(({name, species}) => {
-                    myData.push({ name: `${name}`, species: `${species}` });
+                response.data.results.map(({name, species, url }) => {
+                    myData.push({ name: `${name}`, species: `${species}`, url: `${url}` });
                 });
                 
                 console.log("My Data: ", myData);
@@ -34,7 +34,7 @@ import "./SearchAPI.css";function SearchAPI() {
     const handleChange = event => {
         setSearchTerm(event.target.value);
     };
-
+    
     return (
         <div className="App">
             <h1>Search Form
@@ -53,10 +53,15 @@ import "./SearchAPI.css";function SearchAPI() {
                 
                 <ul className="searchResults">
                     {searchResults.map(character => (
-                        <Card>
-                        <CardTitle>{character['name']}</CardTitle>
-                        <li key={character['name']}> ({character['species']})</li>
-                        </Card>
+                    <Row>
+                        <Col >
+                          <Card body>
+                            <CardTitle><h3>{character['name']}</h3></CardTitle>
+                            <CardText>Species: {character['species']}</CardText>
+                            <CardText>Web Address: <a href={character['url']} target="_blank">{character['url']}</a></CardText>
+                          </Card>
+                        </Col>
+                    </Row>
                     ))}
                 </ul>
                 
