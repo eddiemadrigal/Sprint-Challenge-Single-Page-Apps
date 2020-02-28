@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: When a user wants to see content on the web, a browser is used to render a website containing the requested content and in initial file, usually a home page, is rendered by the browser on the computer.  Normally, if a user wants to access more information from the same site, links are usually used to navigate the tree structure and the server responds by re-directing requests and eventually gives the user the requested information. This sort of user request handling is done with Server side routing.  The process can be very heavy on networks and can sometimes cause the server to time out.  Client side routing, on the other hand, is the process of displaying the contents of a website on the user's computer, much like that done by a server, but without having to go through a network to reach additional content. All of the directories and files along with their paricular routing structure is done by files located on the user's computer.  The browser knows not to go back to the server unless the routing described in the program requires a request to back to the server.  This type of routing, called client-side routing, reduces network congestion, provides a much faster response to a user's request and enables the client's computer to handle the work that would have normally been assigned to a server on some network in some location.
 
 ## Project Set Up
 
