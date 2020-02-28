@@ -14,8 +14,13 @@ import "./SearchAPI.css";function SearchAPI() {
             .then(response => {
                 console.log(response.data.results);
                 const myData = [];
-                response.data.results.map(({name, species, url }) => {
-                    myData.push({ name: `${name}`, species: `${species}`, url: `${url}` });
+                response.data.results.map(({name, species, url, status, gender }) => {
+                    myData.push({ 
+                        name: `${name}`, 
+                        species: `${species}`, 
+                        url: `${url}`, 
+                        status: `${status}`, 
+                        gender: `${gender}` });
                 });
                 
                 console.log("My Data: ", myData);
@@ -57,8 +62,11 @@ import "./SearchAPI.css";function SearchAPI() {
                         <Col >
                           <Card body>
                             <CardTitle><h3>{character['name']}</h3></CardTitle>
-                            <CardText>Species: {character['species']}</CardText>
-                            <CardText>Web Address: <a href={character['url']} target="_blank">{character['url']}</a></CardText>
+                            <CardText>Species: {character['species']}<br />
+                            Status: {character['status']}<br />
+                            Gender: {character['gender']}<br />
+                            Web Address: <a href={character['url']} target="_blank">{character['url']}</a>
+                            </CardText>
                           </Card>
                         </Col>
                     </Row>
